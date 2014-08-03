@@ -64,7 +64,7 @@ def lookup_number(number, phonebook_name):
 
 
 if __name__ == '__main__':
-    args = sys.argv
+    args = sys.argv[:]
     script = args.pop(0)    # name of script is first arg
     command = args.pop(0)   # the next arg will be the main command
 
@@ -73,28 +73,21 @@ if __name__ == '__main__':
         create_phonebook(phonebook_name)
 
     elif command == 'add':
-        name = args.pop(0)
-        number = args.pop(0)
-        phonebook_name = args.pop(0)
+        name, number, phonebook_name = args
         add_entry(name, number, phonebook_name)
 
     elif command == 'update':
-        name = args.pop(0)
-        new_number = args.pop(0)
-        phonebook_name = args.pop(0)
+        name, new_number, phonebook_name = args
         update_entry(name, new_number, phonebook_name)
 
     elif command == 'remove':
-        name = args.pop(0)
-        phonebook_name = args.pop(0)
+        name, phonebook_name = args
         remove_entry(name, phonebook_name)
 
     elif command == 'lookup':
-        name = args.pop(0)
-        phonebook_name = args.pop(0)
+        name, phonebook_name = args
         lookup_name(name, phonebook_name)
 
     elif command == 'reverse-lookup':
-        number = args.pop(0)
-        phonebook_name = args.pop(0)
+        phonebook_name, phonebook_name = args
         lookup_number(number, phonebook_name)
