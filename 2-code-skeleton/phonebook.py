@@ -30,6 +30,16 @@ def update_entry(name, new_number, phonebook_name):
     pass
 
 
+def remove_entry(name, phonebook_name):
+    """Remove an entry with the given name in the given phonebook.
+
+    Args:
+        name (str): name of the entry to delete
+        phonebook_name (str): name of the phonebook
+    """
+    pass
+
+
 def lookup_name(name, phonebook_name):
     """Look up an entry by name in the given phonebook.
 
