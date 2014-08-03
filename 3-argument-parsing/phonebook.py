@@ -112,3 +112,5 @@ if __name__ == '__main__':
             quit()
         phonebook_name, phonebook_name = args
         lookup_number(number, phonebook_name)
+    else:
+        print "Invalid command"
