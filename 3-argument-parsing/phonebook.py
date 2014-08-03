@@ -100,7 +100,7 @@ if __name__ == '__main__':
         remove_entry(name, phonebook_name)
 
     elif command == 'lookup':
-        if len(args) != 3:
+        if len(args) != 2:
             print "Name and phonebook name required"
             quit()
         name, phonebook_name = args
