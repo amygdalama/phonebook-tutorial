@@ -60,15 +60,11 @@ def lookup_name(name, phonebook_name):
         phonebook_name (str): name of the phonebook
     """
     filename = '%s.txt' % phonebook_name
-    matches = []
     with open(filename, 'r') as f:      # 'r' for read mode
         for line in f:
             entry_name, entry_number = line.strip().split('\t')
             if entry_name == name:
-                matches.append((entry_name, entry_number))
-    for match in matches:
-        match_name, match_number = match
-        print match_name, match_number
+                print entry_name, entry_number
 
 
 def lookup_number(number, phonebook_name):
